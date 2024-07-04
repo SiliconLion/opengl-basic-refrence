@@ -144,6 +144,13 @@ unsafe {
         -0.5,  0.5, 0.0   // top left
     ];
 
+    //shrink each vertex down by half.
+    for v in &mut vertices {
+        *v *= 0.05;
+    }
+
+    println!("{:?}", vertices);
+
     let indices =
     [  // note that we start from 0!
         0, 1, 3,  // first Triangle
